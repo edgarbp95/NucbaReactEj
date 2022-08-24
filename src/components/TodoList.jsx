@@ -39,14 +39,14 @@ const TodoList = () => {
     },[todos])
 
   return (
-    <>
+    <div className='sm:mx-10'>
       <Todoform addTodo={addTodo} deleteAll={deleteAll}/>
-      <div className='w-full h-96 mt-10 ml-32'>
+      <div className='w-full h-96 mt-10 ml-32 sm:mx-0'>
         {todos.map((item)=>(
             <Todo key={item.id} todo={item} modifyTodo={modifyTodo} deleteTodo={deleteTodo} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

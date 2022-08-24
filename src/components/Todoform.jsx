@@ -28,7 +28,7 @@ const Todoform = ({addTodo,deleteAll}) => {
     }
     
   return (
-    <div className='flex gap-3 mt-24 ml-32'>
+    <div className='flex gap-3 mt-24 ml-32 sm:flex-col sm:mx-0'>
        
         <input className='border-2 border-black p-2' type="text" name='nombre' placeholder='Ingrese una tarea...' value={todo.nombre} onChange={handleChange} />
         <select className='border-2 border-black p-2' name="estado" id="state" value={todo.estado} onChange={handleChange}>
