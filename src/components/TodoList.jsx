@@ -1,24 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
+import { useState } from 'react'
+import { useContext } from 'react'
+import { TodoContext } from '../context/TodoProvider'
 import Todo from './Todo'
 
 import Todoform from './Todoform'
 
 const TodoList = () => {
 
-    const [todos,setTodos] = useState([])
+    const {todos,setTodos,setState} =useContext(TodoContext)
 
     const addTodo = (todo) => {
         setTodos((old)=> [...old,todo] )
     }
-    
-    console.log(todos)
 
     const deleteAll = () =>{
         setTodos([])
+        setState(true)
     }
     
     const deleteTodo = (id) =>{
         setTodos((old)=> old.filter((todo)=>todo.id !== id))
+        setState(true)
     }
 
     const modifyTodo = (id) =>{
@@ -28,6 +31,7 @@ const TodoList = () => {
         setTodos(modTodo)
     }
 
+    //Local Storage
     useEffect(()=>{
         if(localStorage.getItem("todos")){
             setTodos(JSON.parse(localStorage.getItem("todos")))

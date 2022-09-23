@@ -1,14 +1,22 @@
-
+import { Route, Routes } from "react-router-dom";
 import './App.css';
-import TodoList from './components/TodoList';
+import Navbar from "./components/Navbar";
+import Home from "./routes/Home";
+import PokeRoute from "./routes/PokeRoute";
+import TodoRoute from "./routes/TodoRoute";
 
 
 function App() {
  
 
   return (
-    <div>
-      <TodoList />
+    <div className="h-screen">
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/todolist" element={<TodoRoute />}/>
+          <Route path="/pokeapi" element={<PokeRoute />}/>
+        </Routes>
     </div>
   );
 }

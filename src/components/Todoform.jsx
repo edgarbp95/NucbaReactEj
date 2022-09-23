@@ -37,7 +37,7 @@ const Todoform = ({addTodo,deleteAll}) => {
         </select>
         <button className='bg-green-600 text-white p-2 w-32' onClick={handleSubmit}>Agregar tarea</button>
         <button className='bg-red-600 text-white p-2 w-32' onClick={deleteAll}>Limpiar lista</button>
-     
+             
     </div>
   )
 }

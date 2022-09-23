@@ -1,9 +1,6 @@
 import React from 'react'
-
 import {AiOutlineCheckSquare} from "react-icons/ai"
 import {BiTrash} from "react-icons/bi"
-
-
 
 
 const Todo = ({todo,modifyTodo,deleteTodo}) => {
