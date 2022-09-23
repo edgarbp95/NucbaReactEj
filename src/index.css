@@ -2,6 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.active{
-    border-bottom: 2px solid yellow;
-}
